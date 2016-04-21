@@ -1,6 +1,7 @@
 import commands.Cwd;
 import commands.Dir;
 import commands.Reset;
+import commands.Tree;
 import prompt.Prompt;
 
 import java.util.Scanner;
@@ -22,6 +23,9 @@ public class Main {
                     break;
                 case "dir":
                     new Dir().operation();
+                    break;
+                case "tree":
+                    new Tree().operation();
                     break;
                 case "exit":
                     System.exit(0);
