@@ -11,6 +11,6 @@ public class Cwd implements Command{
 
     @Override
     public void operation() {
-        prompt.setPrompt(System.getProperty("user.dir"));
+        prompt.setPrompt(true);
     }
 }

@@ -7,9 +7,10 @@ public class Reset implements Command {
 
     public Reset(Prompt prompt) {
         this.prompt = prompt;
-    }@Override
+    }
 
+    @Override
     public void operation() {
-        prompt.setDefoultPropmt();
+        prompt.setPrompt(false);
     }
 }

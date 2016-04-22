@@ -2,22 +2,19 @@ package prompt;
 
 public class Prompt {
     private String name;
-    private String prompt;
+    private boolean prompt;
 
     public Prompt() {
         name = System.getProperty("user.name");
-        prompt = "$";
+        prompt = false;
     }
 
-    public void setPrompt(String prompt) {
+    public void setPrompt(boolean prompt) {
         this.prompt = prompt;
-    }
-
-    public void setDefoultPropmt(){
-        prompt = "$";
     }
 
     @Override
     public String toString() {
-        return "["+name+"] " + prompt + " >";  }
+        return "[" + name + "] " + (prompt ? System.getProperty("user.dir") : "$") + " >";
+    }
 }
