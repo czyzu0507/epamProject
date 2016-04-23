@@ -1,4 +1,7 @@
-import commands.*;
+import commands.Cd;
+import commands.Dir;
+import commands.PromptCommand;
+import commands.Tree;
 import prompt.Prompt;
 
 import java.util.Scanner;
@@ -12,11 +15,8 @@ public class Main {
             System.out.print(prompt);
             comment = in.next();
             switch (comment){
-                case "$cwd":
-                    new Cwd(prompt).operation();
-                    break;
-                case "reset":
-                    new Reset(prompt).operation();
+                case "prompt":
+                    new PromptCommand(prompt, in.next()).operation();
                     break;
                 case "dir":
                     new Dir().operation();
